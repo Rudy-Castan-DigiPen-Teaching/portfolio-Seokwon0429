@@ -10,7 +10,7 @@
 
     <!-- Help auto scale for desktop & mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDENT TODO Website</title>
+    <title>Seokwon Jung - Fog</title>
 
     <!-- Normalize the difference across browsers  https://necolas.github.io/normalize.css/ -->
     <link rel="stylesheet" href="../external/normalize.css">
@@ -30,13 +30,15 @@
 
 <body>
     <header>
-        <div class="logo">
-            <!-- alt text can be blank since the logo is purely decorative and putting something like logo isn't actually helpful -->
-            <img src="../img/cout.jpg" alt="">
+        <div class="header-actions">
+            <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true">
+                <i class="fas fa-moon" aria-hidden="true"></i>
+                <span class="theme-toggle__text">Dark</span>
+            </button>
+            <button class="nav-toggle" type="button" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
         </div>
-        <button class="nav-toggle" aria-label="toggle navigation">
-            <span class="hamburger"></span>
-        </button>
         <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__item">
@@ -69,35 +71,38 @@
 
     <div class="portfolio-item-individual">
         <h2>Project Overview</h2>
-        <p>Provide a brief description of the project, its purpose, and what you aimed to achieve.</p>
+        <p>This page is prepared for the fog assignment. The demo will compare linear and exponential fog so distance,
+            density, and color can be adjusted and observed in real time.</p>
 
         <h2>Tasks Completed</h2>
         <ul>
-            <li>Describe the tasks you completed for this project.</li>
-            <li>Be specific about your contributions and the technologies used.</li>
+            <li>Created a dedicated page for the fog rendering topic.</li>
+            <li>Prepared space for controls that expose the parameters affecting fog behavior.</li>
         </ul>
 
         <h2>Reflection</h2>
-        <p>Reflect on the project, discussing any challenges faced, solutions implemented, and what you learned from the
-            experience.</p>
+        <p>The focus of this topic will be learning how fragment shading can use camera distance to improve depth,
+            mood, and readability in a 3D scene.</p>
     </div>
 
     <div class="portfolio-item-individual">
         <h2>Demo</h2>
-        <iframe id="demo" src="../webgl/D03Fog/graphics_fun.html?start=fog" tabindex="-1"></iframe>
+        <div class="demo-panel">
+            <p>The WebGL demo will be added here after the fog assignment is implemented.</p>
+        </div>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <a href="mailto:my.email@digipen.edu" class="footer__link">my.email@digipen.edu</a>
+        <a href="mailto:seokwon.jung@digipen.edu" class="footer__link">seokwon.jung@digipen.edu</a>
         <ul class="social-list">
             <li class="social-list__item">
-                <a class="social-list__link" href="https://linkedin.com/in/mylinkedinid">
+                <a class="social-list__link" href="https://linkedin.com/in/seokwon-jung-3a430a394">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </li>
             <li class="social-list__item">
-                <a class="social-list__link" href="https://github.com/mygithubid">
+                <a class="social-list__link" href="https://github.com/Seokwon0429">
                     <i class="fab fa-github"></i>
                 </a>
             </li>

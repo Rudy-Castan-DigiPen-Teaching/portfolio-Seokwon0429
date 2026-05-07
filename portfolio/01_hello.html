@@ -10,7 +10,7 @@
 
     <!-- Help auto scale for desktop & mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDENT TODO Website</title>
+    <title>Seokwon Jung - Hello Quad</title>
 
     <!-- Normalize the difference across browsers  https://necolas.github.io/normalize.css/ -->
     <link rel="stylesheet" href="../external/normalize.css">
@@ -30,13 +30,15 @@
 
 <body>
     <header>
-        <div class="logo">
-            <!-- alt text can be blank since the logo is purely decorative and putting something like logo isn't actually helpful -->
-            <img src="../img/cout.jpg" alt="">
+        <div class="header-actions">
+            <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true">
+                <i class="fas fa-moon" aria-hidden="true"></i>
+                <span class="theme-toggle__text">Dark</span>
+            </button>
+            <button class="nav-toggle" type="button" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
         </div>
-        <button class="nav-toggle" aria-label="toggle navigation">
-            <span class="hamburger"></span>
-        </button>
         <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__item">
@@ -69,37 +71,37 @@
 
     <div class="portfolio-item-individual">
         <h2>Project Overview</h2>
-        <p>Provide a brief description of the project, its purpose, and what you aimed to achieve.</p>
+        <p>Hello Quad is the first graphics demo in this CS250 portfolio. The goal is to confirm that the
+            WebGL-compatible OpenGL build loads correctly in the browser and can render a simple scene.</p>
 
         <h2>Tasks Completed</h2>
         <ul>
-            <li>Describe the tasks you completed for this project.</li>
-            <li>Be specific about your contributions and the technologies used.</li>
+            <li>Connected the generated WebGL demo to the portfolio page.</li>
+            <li>Prepared the page layout, project thumbnail, and embedded demo frame for the course executable.</li>
         </ul>
 
         <h2>Reflection</h2>
-        <p>Reflect on the project, discussing any challenges faced, solutions implemented, and what you learned from the
-            experience.</p>
+        <p>This project helped me connect the portfolio website with the graphics executable workflow. It also gave me
+            a clean starting point for adding future rendering assignments to the same site.</p>
     </div>
 
     <div class="portfolio-item-individual">
         <h2>Demo</h2>
-        <!-- TODO demo the webgl version of the project -->
-        <iframe id="demo" src="../webgl/D01HelloQuad/graphics_fun.html"></iframe>
+        <iframe id="demo" src="../webgl/affine_demo/affine_demo.html"></iframe>
     </div>
 
 
     <!-- Footer -->
     <footer class="footer">
-        <a href="mailto:my.email@digipen.edu" class="footer__link">my.email@digipen.edu</a>
+        <a href="mailto:seokwon.jung@digipen.edu" class="footer__link">seokwon.jung@digipen.edu</a>
         <ul class="social-list">
             <li class="social-list__item">
-                <a class="social-list__link" href="https://linkedin.com/in/mylinkedinid">
+                <a class="social-list__link" href="https://linkedin.com/in/seokwon-jung-3a430a394">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </li>
             <li class="social-list__item">
-                <a class="social-list__link" href="https://github.com/mygithubid">
+                <a class="social-list__link" href="https://github.com/Seokwon0429">
                     <i class="fab fa-github"></i>
                 </a>
             </li>

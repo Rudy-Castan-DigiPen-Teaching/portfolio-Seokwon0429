@@ -6,11 +6,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="../img/face.jpg">
+    <link rel="icon" type="image/svg+xml" href="img/face.jpg">
 
     <!-- Help auto scale for desktop & mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STUDENT TODO Website</title>
+    <title>Seokwon Jung Website</title>
 
     <!-- Normalize the difference across browsers  https://necolas.github.io/normalize.css/ -->
     <link rel="stylesheet" href="external/normalize.css" />
@@ -30,13 +30,15 @@
 
 <body>
     <header>
-        <div class="logo">
-            <!-- alt text can be blank since the logo is purely decorative and putting something like logo isn't actually helpful -->
-            <img src="img/cout.jpg" alt="">
+        <div class="header-actions">
+            <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true">
+                <i class="fas fa-moon" aria-hidden="true"></i>
+                <span class="theme-toggle__text">Dark</span>
+            </button>
+            <button class="nav-toggle" type="button" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
         </div>
-        <button class="nav-toggle" aria-label="toggle navigation">
-            <span class="hamburger"></span>
-        </button>
         <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__item"> <a href="#home" class="nav__link">Home</a> </li>
@@ -48,48 +50,47 @@
         </nav>
     </header>
 
+    <div class="menu-image" aria-hidden="true">
+        <img src="img/cout.jpg" alt="">
+    </div>
+
     <!-- Introduction -->
 
-    <section class="intro" id="#home">
-        <!-- TODO put in a mouse based interactive shader visualization page-->
-        <!-- <div class="intro-bg">
-            <iframe src="webgl/for_fun.html"></iframe>
-        </div> -->
+    <section class="intro" id="home">
         <h1 class="section__title section__title--intro">
-            Hi, I am <strong>TODO TODO</strong>
+            Hi, I am <strong>Seokwon Jung</strong>
         </h1>
-        <p class="section__subtitle section__subtitle--intro">Game Programmer/Designer/Developer/Player/TODO/TODO</p>
-        <img src="img/face.jpg" alt="a picture of TODO TODO smiling" class="intro__img" />
+        <p class="section__subtitle section__subtitle--intro">Game Developer</p>
+        <img src="img/face.jpg" alt="a picture of Seokwon Jung smiling" class="intro__img" />
     </section>
 
     <!-- My Services -->
     <section class="my-services" id="skills">
-        <h2 class="section__title section__title--services">SKLILZ</h2>
+        <h2 class="section__title section__title--services">Skills</h2>
         <div class="services">
             <div class="service">
-                <h3>SKILL TODO</h3>
-                <p> TODO
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+                <h3>C++ Development</h3>
+                <p>
+                    I have experience writing C++ programs through coursework and projects.
+                    I am familiar with object-oriented programming, classes, pointers, memory management,
+                    debugging, and building small systems with reusable code.
                 </p>
             </div>
 
             <div class="service">
-                <h3>SKILL TODO</h3>
-                <p> TODO
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+                <h3>Game Development</h3>
+                <p>
+                    I am interested in gameplay programming and interactive systems. I have worked on
+                    game-related features such as player movement, collision, UI behavior, and gameplay logic.
                 </p>
             </div>
 
             <div class="service">
-                <h3>SKILL TODO</h3>
-                <p> TODO
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+                <h3>QA / Playtesting</h3>
+                <p>
+                    As a QA team member, I tested gameplay systems, reported bugs, and suggested improvements
+                    for game balance and player experience. I helped evaluate systems such as health, damage,
+                    recovery timing, and player feedback.
                 </p>
             </div>
         </div>
@@ -101,22 +102,23 @@
     <section class="about-me" id="about">
         <h2 class="section__title section__title--about">Who I am</h2>
         <p class="section__subtitle section__subtitle--about">
-            Student Game Programmer TODO TODO
+            Student Game Programmer Seokwon Jung
         </p>
 
         <div class="about-me__body">
             <p>
-                TODO Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat.
+                I am Seokwon Jung, a student game programmer who is passionate about game development.
+                I enjoy learning how games are built, from gameplay systems and player controls to
+                debugging, testing, and improving the overall player experience.
             </p>
             <p>
-                TODO Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat.
+                I am also interested in computer graphics through my coursework, especially topics such as
+                transformations, cameras, meshes, rasterization, and rendering. As someone who also loves
+                playing games, I want to create interactive experiences that feel fun, responsive, and
+                meaningful to players.
             </p>
         </div>
-        <img src="img/tall.jpg" alt="picture of TODO TODO" class="about-me__img" />
+        <img src="img/tall.jpg" alt="picture of Seokwon Jung" class="about-me__img" />
     </section>
 
     <!-- My Portfolio -->
@@ -154,64 +156,71 @@
     <!-- Resume Section -->
     <section class="my-resume" id="resume">
         <h2 class="section__title section__title--resume">Resume</h2>
-        <a target="_blank" href="docs/Resume.pdf"><i class="far fa-file-pdf"></i> PDF</a>
+        <div class="resume-actions" aria-label="Resume actions">
+            <a target="_blank" rel="noopener" href="docs/Resume.pdf"><i class="far fa-file-pdf"></i> View Resume PDF</a>
+            <a href="docs/Resume.pdf" download="Seokwon_Jung_Resume.pdf"><i class="fas fa-download"></i> Download Resume PDF</a>
+        </div>
 
         <div class="resume-section">
             <h3>Experience</h3>
             <div class="resume-item">
                 <p>
-                    <b>Title, Company</b></br>
-                    Month Year - Present</br>
-                    <em>City, State, Country</em></br>
-                    What you did, how you did it, result. Quantify your achievement(s) try to have at least one like
-                    this. Look at the example below.
+                    <b>Gameplay Programmer / QA Contributor, OLLIM</b><br>
+                    2025 - Present<br>
+                    <em>ASTAR Team, DigiPen Institute of Technology</em><br>
+                    Testing gameplay systems, reproducing bugs, and reporting issues clearly while contributing to
+                    player experience improvements through balance, health, damage, and recovery timing adjustments.
                 </p>
             </div>
             <div class="resume-item">
                 <p>
-                    <b>Software Test Engineer Intern, Qualtrics</b></br>
-                    Month Year - Month Year </br>
-                    <em>Seattle, WA</em></br>
-                    Implemented an extensible script in Python to automate project creation with static data on tests to
-                    improve pass rates and duration, ultimately speeding up software releases. Improved test times
-                    across 3 teams by nearly 400% with more stability. Reviewed design docs and prototypes of an
-                    upcoming feature release to create nearly 50 test cases. Performed manual testing and triaged 15
-                    bugs with engineers.
+                    <b>QA / Gameplay Programmer, DIESKIE</b><br>
+                    2025<br>
+                    <em>DigiPen Institute of Technology</em><br>
+                    Contributed beyond QA by fixing random path generation bugs, implementing the final random map
+                    generation algorithm, building collision systems, and developing ski movement mechanics that slow
+                    the player based on horizontal movement speed.
                 </p>
             </div>
             <h3>Projects</h3>
             <div class="resume-item">
                 <p>
-                    <b>Role, Name of Project</b></br>
-                    Month Year - Month Year</br>
-                    <em>Redmond, WA</em></br>
-                    Type of game, (2D Platformer, FPS) and describe its genre (Horror, Adventure, etc.).
-                    Collaborated with a team of x and developed a ...
-                    Designed most of the front end & debugged PHP.
-                    Awarded the Most Creative Award by Appian and Best Innovation in Collaboration Award by Red
-                    Ventures.
+                    <b>DIESKIE</b><br>
+                    2025<br>
+                    <em>First-Person Skiing Game</em><br>
+                    Implemented gameplay effects including collision feedback with trees and experimented with multiple
+                    shadow techniques to support the game's visual direction during play.
+                </p>
+            </div>
+            <div class="resume-item">
+                <p>
+                    <b>CS250 Graphics Portfolio</b><br>
+                    2026<br>
+                    <em>WebGL / OpenGL</em><br>
+                    Created a portfolio website for graphics coursework and prepared dedicated pages for procedural
+                    geometry, fog, toon shading, shadow mapping, and procedural noise demos.
                 </p>
             </div>
 
             <h3>Leadership Experience</h3>
             <div class="resume-item">
                 <p>
-                    <b>Role, DigiPen Institute of Technology</b></br>
-                    Month Year - Month Year</br>
-                    <em>Redmond, WA</em></br>
-                    A lot of you do many things on campus.
-                    For example, did you manage/host a game jam?
-                    Brainstorm initiatives you have worked on.
+                    <b>Team Collaboration and Review, DigiPen Institute of Technology</b><br>
+                    2025 - Present<br>
+                    <em>Daegu, Korea</em><br>
+                    Communicated test results, reviewed gameplay behavior with teammates, and helped identify issues
+                    that affected player experience during coursework projects.
                 </p>
             </div>
 
             <h3>Education</h3>
             <div class="resume-item">
                 <p>
-                    <b>Bachelor of Science in Computer Science in Real-Time Interactive Simulation</b></br>
-                    Year-Year</br>
-                    <em>Daegu, Korea & Redmond, WA, USA</em></br>
-                    Relevant Courses: Name the courses that would draw attention, significant, relevant to the job.
+                    <b>Bachelor of Science in Computer Science in Real-Time Interactive Simulation</b><br>
+                    2022 - Present<br>
+                    <em>Daegu, Korea & Redmond, WA, USA</em><br>
+                    Relevant Courses: Computer Graphics, C/C++ programming, real-time interactive simulation, game
+                    project courses, debugging, and software development fundamentals.
                 </p>
             </div>
         </div>
@@ -220,15 +229,15 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <a href="mailto:my.email@digipen.edu" class="footer__link">my.email@digipen.edu</a>
+        <a href="mailto:seokwon.jung@digipen.edu" class="footer__link">seokwon.jung@digipen.edu</a>
         <ul class="social-list">
             <li class="social-list__item">
-                <a class="social-list__link" href="https://linkedin.com/in/mylinkedinid">
+                <a class="social-list__link" href="https://linkedin.com/in/seokwon-jung-3a430a394">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </li>
             <li class="social-list__item">
-                <a class="social-list__link" href="https://github.com/mygithubid">
+                <a class="social-list__link" href="https://github.com/Seokwon0429">
                     <i class="fab fa-github"></i>
                 </a>
             </li>
