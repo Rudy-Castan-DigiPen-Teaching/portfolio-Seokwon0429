@@ -71,25 +71,32 @@
 
     <div class="portfolio-item-individual">
         <h2>Project Overview</h2>
-        <p>This page is prepared for the shadow mapping assignment. The demo will render shadows from a directional
-            light and show how light position, camera placement, and depth maps affect the final image.</p>
-
+        <p> This project implements shadow mapping in a real-time 3D graphics demo. 
+            The scene is rendered from the light's point of view to create a depth map, 
+            and that depth information is then used during the main rendering pass to determine which parts of the scene are in shadow. 
+            The demo also includes tools for visualizing the light frustum and the generated shadow map, 
+            making it easier to understand how shadow mapping works internally. </p>
         <h2>Tasks Completed</h2>
-        <ul>
-            <li>Created a dedicated page for the shadow mapping topic.</li>
-            <li>Prepared the layout for a WebGL demo and notes about light-space rendering.</li>
-        </ul>
+        <ul>    <li>Added and registered the Shadow Mapping demo in the project.</li> 
+                <li>Implemented depth texture and RGBA texture support in the Texture class.</li>
+                <li>Implemented the FrameBuffer class to render the scene into a depth texture.</li>
+                <li>Implemented camera view and world transformation matrix calculations.</li>
+                <li>Rendered the scene from the light's perspective to generate a shadow map.</li>
+                <li>Applied shadow mapping during the main screen rendering pass.</li>
+                <li>Added shader logic for shadow lookup, lighting, gamma correction, and fog.</li>
+                <li>Added debug visualization for the light frustum and depth texture.</li>
+                <li>Embedded the working WebGL demo into this portfolio page.</li> </ul>
 
         <h2>Reflection</h2>
-        <p>This topic will strengthen my understanding of multi-pass rendering and how depth information can be reused
-            to create more believable scenes.</p>
+        <p> This assignment helped me understand how multi-pass rendering is used to create realistic shadows in real-time graphics. 
+            One of the main challenges was connecting multiple systems together, including textures, framebuffers, cameras, shaders, and the final rendering pass. 
+            I also learned how important light-space transformations are when comparing the current fragment position against the shadow map.
+             Visualizing the depth texture and light frustum made it much easier to debug the result and understand why shadows appeared correctly or incorrectly. </p>
     </div>
 
     <div class="portfolio-item-individual">
         <h2>Demo</h2>
-        <div class="demo-panel">
-            <p>The WebGL demo will be added here after the shadow mapping assignment is implemented.</p>
-        </div>
+        <iframe id="demo" src="../webgl/05ShadowMapping/ShadowMapping.html?start=shadow" tabindex="-1"></iframe>
     </div>
 
     <!-- Footer -->
