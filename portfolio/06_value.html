@@ -71,25 +71,35 @@
 
     <div class="portfolio-item-individual">
         <h2>Project Overview</h2>
-        <p>This page is prepared for the value noise assignment. The demo will use procedural noise to generate
-            textures and explore how interpolation changes the appearance of generated patterns.</p>
+        <p> This project implements value noise for procedural texture generation in a real-time graphics demo.
+            The algorithm generates random values, uses permutation hashing to select repeatable samples, and blends
+            those samples with interpolation to create smooth noise patterns. The demo visualizes the generated noise
+            as a texture so the effect of period size, smoothing, and dimensional sampling can be observed directly. </p>
 
         <h2>Tasks Completed</h2>
         <ul>
-            <li>Created a dedicated page for the value noise topic.</li>
-            <li>Prepared the page for controls that can adjust scale, frequency, and generated texture behavior.</li>
+            <li>Added and registered the Value Noise demo in the project.</li>
+            <li>Implemented value noise evaluation for 1D, 2D, and 3D coordinates.</li>
+            <li>Used permutation hashing to generate repeatable pseudo-random sample lookups.</li>
+            <li>Supported multiple period sizes and resized the stored random values when the period changes.</li>
+            <li>Applied smoothing methods to interpolation parameters before blending noise values.</li>
+            <li>Implemented linear, bilinear, and trilinear interpolation for different noise dimensions.</li>
+            <li>Added texture uploading support so generated RGBA noise data can update the displayed texture.</li>
+            <li>Created simple vertex and fragment shaders for rendering the generated noise texture.</li>
+            <li>Embedded the working WebGL demo into this portfolio page.</li>
         </ul>
 
         <h2>Reflection</h2>
-        <p>This topic will help me connect math, randomness, and interpolation with practical graphics features such
-            as procedural textures and terrain-like surfaces.</p>
+        <p> This assignment helped me understand how randomness can become controllable visual detail when it is
+            combined with hashing and interpolation. The most important challenge was making the noise repeatable while
+            still appearing random, especially across different dimensions and period sizes. I also learned how changing
+            the smoothing function affects the final texture, and how procedural data can be generated on the CPU,
+            uploaded to a texture, and displayed through a shader in real time. </p>
     </div>
 
     <div class="portfolio-item-individual">
         <h2>Demo</h2>
-        <div class="demo-panel">
-            <p>The WebGL demo will be added here after the value noise assignment is implemented.</p>
-        </div>
+        <iframe id="demo" src="../webgl/06ValueNoise/ValueNoise.html?start=value" tabindex="-1"></iframe>
     </div>
 
     <!-- Footer -->
