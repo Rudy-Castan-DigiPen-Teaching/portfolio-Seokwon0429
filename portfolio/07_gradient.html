@@ -70,25 +70,35 @@
 
     <div class="portfolio-item-individual">
         <h2>Project Overview</h2>
-        <p>This page is prepared for the gradient noise assignment. The demo will explore Perlin-style noise and show
-            how gradient vectors create smoother procedural patterns than basic value noise.</p>
+        <p> This project implements gradient noise for procedural texture generation in a real-time graphics demo.
+            Instead of blending only random values at grid points, the algorithm assigns repeatable gradient directions,
+            computes dot products between those gradients and local offset vectors, and interpolates the results to
+            create smooth Perlin-style noise. The demo visualizes the generated noise as a texture so the differences
+            between value-based and gradient-based procedural patterns can be observed directly. </p>
 
         <h2>Tasks Completed</h2>
         <ul>
-            <li>Created a dedicated page for the gradient noise topic.</li>
-            <li>Prepared the layout for future texture and mesh generation controls.</li>
+            <li>Added and registered the Gradient Noise demo in the project.</li>
+            <li>Implemented repeatable hash-based lookup for gradient directions.</li>
+            <li>Calculated gradient dot products from lattice corners to the sampled position.</li>
+            <li>Implemented improved Perlin noise evaluation for smoother procedural patterns.</li>
+            <li>Remapped gradient noise values into a displayable texture range.</li>
+            <li>Generated RGBA noise data and uploaded it for real-time WebGL texture rendering.</li>
+            <li>Built on the Value Noise assignment to compare random-value interpolation with gradient-vector noise.</li>
+            <li>Embedded the working WebGL demo into this portfolio page.</li>
         </ul>
 
         <h2>Reflection</h2>
-        <p>This topic will build on value noise and help me understand why gradient-based noise is useful for natural
-            looking graphics effects.</p>
+        <p> This assignment helped me understand why gradient noise produces more natural-looking procedural detail than
+            simple value noise. The most important challenge was keeping the gradient selection deterministic while still
+            making the texture look organic and continuous. I also learned how the dot product between a gradient vector
+            and a distance vector gives each cell a directional influence, and how interpolation turns those local
+            influences into a smooth final pattern. </p>
     </div>
 
     <div class="portfolio-item-individual">
         <h2>Demo</h2>
-        <div class="demo-panel">
-            <p>The WebGL demo will be added here after the gradient noise assignment is implemented.</p>
-        </div>
+        <iframe id="demo" src="../webgl/07Gradient/07gradient.html?start=gradient" tabindex="-1"></iframe>
     </div>
 
     <!-- Footer -->
